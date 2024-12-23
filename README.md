@@ -110,7 +110,7 @@ While wearable and portable posture monitoring systems are becoming common, many
 ## Project Structure
 
 ```
-posture-detection-system-using-machine-learning/
+posture-detection-system-using-machine-learning
 ├── README.md                  # Project documentation
 |-- data
 |   |-- Data_Set.csv                # Raw dataset used for training.
