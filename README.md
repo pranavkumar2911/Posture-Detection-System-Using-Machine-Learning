@@ -110,14 +110,26 @@ While wearable and portable posture monitoring systems are becoming common, many
 ## Project Structure
 
 ```
-posture-detection-system/
+posture-detection-system-using-machine-learning/
 ├── README.md                  # Project documentation
-├── data/                      # Collected IMU data
-├── models/                    # Pre-trained and TFLite models
-├── src/
-│   ├── data_collection.ino    # Arduino code for data collection
-│   ├── inference.ino          # Arduino code for real-time inference
-│   ├── model_training/        # Python scripts for training and preprocessing
+|-- data
+|   |-- Data_Set.csv                # Raw dataset used for training.
+|
+|-- models
+|   |-- model.tflite                # Trained and quantized TensorFlow Lite model.
+|
+|-- plots                           # Visualizations of training results.
+|   |-- accelerometer_accuracy.png
+|   |-- accelerometer_loss.png
+|   |-- gyroscope_accuracy.png
+|   |-- gyroscope_loss.png
+|   |-- magnetometer_accuracy.png
+|   |-- magnetometer_loss.png
+|
+|-- src                             # Source code for data collection and deployment.
+|   |-- data_collection.ino         # Arduino sketch for collecting sensor data.
+|   |-- inference.ino               # Arduino sketch for running inference.
+|   |-- model_training.ipynb        # Jupyter Notebook for training the ML model.
 ├── LICENSE                    # License information
 └── docs/                      # Additional documentation
 ```
